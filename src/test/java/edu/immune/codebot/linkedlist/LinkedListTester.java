@@ -35,6 +35,12 @@ public class LinkedListTester {
 		linkedList.print();
 		
 		LinkedListUtil.printInReverse(linkedList);
+		
+		LinkedList<Integer> reversed = LinkedListUtil.reverse(linkedList, true);
+		reversed.print();
+		
+		LinkedList<Integer> reversed2 = LinkedListUtil.reverse(linkedList, false);
+		reversed2.print();
 	}
 
 }
