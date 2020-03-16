@@ -2,7 +2,7 @@ package edu.immune.codebot.graph.directed.traversal;
 
 import java.util.Iterator;
 
-import edu.immune.codebot.graph.directed.DirectedGraph;
+import edu.immune.codebot.graph.DirectedGraph;
 
 public class DirectedGraphDFS {
 	

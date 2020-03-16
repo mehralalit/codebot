@@ -1,4 +1,4 @@
-package edu.immune.codebot.graph.directed;
+package edu.immune.codebot.graph;
 
 import java.util.LinkedList;
 

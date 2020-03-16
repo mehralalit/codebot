@@ -1,6 +1,6 @@
 package edu.immune.codebot.graph.directed.problems;
 
-import edu.immune.codebot.graph.directed.DirectedGraph;
+import edu.immune.codebot.graph.DirectedGraph;
 
 public class CycleDetector {
 

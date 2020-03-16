@@ -2,7 +2,7 @@ package edu.immune.codebot.graph.undirected.traversal;
 
 import java.util.Iterator;
 
-import edu.immune.codebot.graph.undirected.UndirectedGraph;
+import edu.immune.codebot.graph.UndirectedGraph;
 
 public class UndirectedGraphDFS {
 	

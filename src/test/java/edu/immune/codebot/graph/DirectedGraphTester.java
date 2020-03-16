@@ -1,6 +1,5 @@
 package edu.immune.codebot.graph;
 
-import edu.immune.codebot.graph.directed.DirectedGraph;
 import edu.immune.codebot.graph.directed.problems.CycleDetector;
 import edu.immune.codebot.graph.directed.traversal.DirectedGraphBFS;
 import edu.immune.codebot.graph.directed.traversal.DirectedGraphDFS;

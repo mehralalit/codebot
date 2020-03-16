@@ -1,6 +1,5 @@
 package edu.immune.codebot.graph;
 
-import edu.immune.codebot.graph.undirected.UndirectedGraph;
 import edu.immune.codebot.graph.undirected.traversal.UndirectedGraphBFS;
 import edu.immune.codebot.graph.undirected.traversal.UndirectedGraphDFS;
 

@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import edu.immune.codebot.graph.directed.DirectedGraph;
+import edu.immune.codebot.graph.DirectedGraph;
 
 public class DirectedGraphBFS {
 	
