@@ -4,4 +4,6 @@ The CodeBot project is an attempt to put together, in one place, multiple comput
 
 Current Inclusions:
 
-1. Simple Graph Problems
+1. Standard Graph Implementation
+2. Basic Graph Problems
+2. Standard LinkedList Implementation
