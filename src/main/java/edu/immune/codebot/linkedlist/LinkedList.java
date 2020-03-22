@@ -3,6 +3,8 @@ package edu.immune.codebot.linkedlist;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import edu.immune.codebot.exception.IndexOutOfReachException;
+
 /**
  * LinkedList Implementation. Follows insertion order.
  * 
@@ -85,7 +87,6 @@ public class LinkedList<T> implements Iterable<T> {
 		boolean empty = false;
 
 		if (length == 0) {
-			System.out.println("Linked List is empty");
 			empty = true;
 		}
 
@@ -186,40 +187,53 @@ public class LinkedList<T> implements Iterable<T> {
 	/**
 	 * Remove the element at the head position.<br>
 	 * If the list is empty no changes are made
+	 * 
+	 * @return value at the removed position
 	 */
-	public void removeFromHead() {
+	public T removeFromHead() {
 		if (isEmpty())
-			return;
+			throw new IndexOutOfReachException();
 
-		@SuppressWarnings("unused")
 		Node<T> node = head;
+		T val = node.value;
+		
 		head = head.next;
 		node = null;
 
 		length--;
+		return val;
 	}
 
 	/**
 	 * Remove the element at the tail position.<br>
 	 * If the list is empty no changes are made
+	 * 
+	 * @return value at the removed position
 	 */
-	public void deleteFromTail() {
+	public T removeFromTail() {
 		if (isEmpty())
-			return;
+			throw new IndexOutOfReachException();
 
 		Node<T> step = head;
 		while (step.next != null && step.next.next != null) {
 			step = step.next;
 		}
 
-		@SuppressWarnings("unused")
-		Node<T> node = step.next;
+		T val;
+		if(length == 1) {
+			val = step.value;
+		} else {
+			Node<T> node = step.next;
+			val = node.value;
+			node = null;
+		}
+		
 		step.next = null;
-
 		tail = step;
-		node = null;
 
 		length--;
+		
+		return val;
 	}
 
 	/**
@@ -231,18 +245,16 @@ public class LinkedList<T> implements Iterable<T> {
 	 *                 if position &gt= 1 the new element is added at the tail
 	 *                 position
 	 */
-	public void remove(int position) {
+	public T remove(int position) {
 		if (isEmpty())
-			return;
+			throw new IndexOutOfReachException();
 
 		if (position <= 1) {
-			removeFromHead();
-			return;
+			return removeFromHead();
 		}
 
 		if (position >= length) {
-			deleteFromTail();
-			return;
+			return removeFromTail();
 		}
 
 		Node<T> step = head;
@@ -251,10 +263,12 @@ public class LinkedList<T> implements Iterable<T> {
 		}
 
 		Node<T> node = step.next;
+		T val = node.value;
 		step.next = node.next;
 		node = null;
 
 		length--;
+		return val;
 	}
 
 	/**

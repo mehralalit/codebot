@@ -22,7 +22,7 @@ public class LinkedListTester {
 		linkedList.addToHead(0);
 		linkedList.print();
 		
-		linkedList.deleteFromTail();
+		linkedList.removeFromTail();
 		linkedList.print();
 		linkedList.addToTail(5);
 		linkedList.addToTail(8); 
