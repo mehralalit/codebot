@@ -1,5 +1,6 @@
 package edu.immune.codebot.linkedlist;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -12,7 +13,12 @@ import edu.immune.codebot.exception.IndexOutOfReachException;
  *
  * @param <T>
  */
-public class LinkedList<T> implements Iterable<T> {
+public class LinkedList<T> implements Iterable<T>, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3672988713808015490L;
 
 	/**
 	 * 

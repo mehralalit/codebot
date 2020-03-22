@@ -6,6 +6,12 @@ import java.util.Queue;
 
 import edu.immune.codebot.graph.DirectedGraph;
 
+/**
+ * Traversal algorithm for a {@link DirectedGraph} 
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class DirectedGraphBFS {
 	
 	private DirectedGraph graph;
@@ -14,6 +20,11 @@ public class DirectedGraphBFS {
 		this.graph = graph;
 	}
 	
+	/**
+	 * Traverses the whole graph using Breadth First Search
+	 * 
+	 * @param vertex starting point of the graph for this traversal
+	 */
 	public void traverse(int vertex) {
 		
 		boolean[] visited = new boolean[graph.getVertices()];

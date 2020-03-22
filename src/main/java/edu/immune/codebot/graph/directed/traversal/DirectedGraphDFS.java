@@ -19,7 +19,6 @@ public class DirectedGraphDFS {
 		Iterator<Integer> iterator = graph.getAdj()[vertex].listIterator();
 		while(iterator.hasNext()) {
 			int element = iterator.next();
-//			System.out.printf("current position: %d, stepping to: %d -> %b\n", vertex, element, visited[element]);
 			if(!visited[element]) {
 				dfs(element, visited);
 			}
