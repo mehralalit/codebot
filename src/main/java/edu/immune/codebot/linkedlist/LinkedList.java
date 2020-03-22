@@ -29,33 +29,33 @@ public class LinkedList<T> implements Iterable<T> {
 		}
 
 	}
-	
-	private class LinkedListIterator implements Iterator<T>{
+
+	private class LinkedListIterator implements Iterator<T> {
 
 		private Node<T> next;
 		private T lastReturnedValue;
-		
+
 		public LinkedListIterator() {
-			this.next = isEmpty()?null:head;
+			this.next = isEmpty() ? null : head;
 		}
-		
+
 		@Override
 		public boolean hasNext() {
-			return this.next != null?true:false;
+			return this.next != null ? true : false;
 		}
 
 		@Override
 		public T next() {
-			if(!hasNext()) {
+			if (!hasNext()) {
 				throw new NoSuchElementException();
 			}
-			
+
 			lastReturnedValue = next.value;
 			next = next.next;
-			
+
 			return lastReturnedValue;
 		}
-		
+
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class LinkedList<T> implements Iterable<T> {
 	 * @return <b>true:</b> if the list is empty<br>
 	 *         <b>false:</b> if the list is not empty
 	 */
-	private boolean isEmpty() {
+	public boolean isEmpty() {
 		boolean empty = false;
 
 		if (length == 0) {
@@ -96,21 +96,22 @@ public class LinkedList<T> implements Iterable<T> {
 	/**
 	 * Print the elements in the list in insertion order
 	 */
-	public void print() {
+	public String print() {
 
 		if (isEmpty())
-			return;
+			return "";
 
+		StringBuilder values = new StringBuilder();
 		Node<T> step = head;
 		while (step != null) {
-			System.out.printf("%d", step.value);
+			values.append(step.value);
 			step = step.next;
 			if (step != null) {
-				System.out.print(" --> ");
-			} else {
-				System.out.println();
-			}
+				values.append(" --> ");
+			} 
 		}
+		
+		return values.toString();
 	}
 
 	/**
@@ -196,7 +197,7 @@ public class LinkedList<T> implements Iterable<T> {
 
 		Node<T> node = head;
 		T val = node.value;
-		
+
 		head = head.next;
 		node = null;
 
@@ -220,19 +221,19 @@ public class LinkedList<T> implements Iterable<T> {
 		}
 
 		T val;
-		if(length == 1) {
+		if (length == 1) {
 			val = step.value;
 		} else {
 			Node<T> node = step.next;
 			val = node.value;
 			node = null;
 		}
-		
+
 		step.next = null;
 		tail = step;
 
 		length--;
-		
+
 		return val;
 	}
 
