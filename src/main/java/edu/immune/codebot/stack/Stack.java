@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.immune.codebot.exception.IndexOutOfReachException;
+
 /**
  * Generic Implementation of Stack. Current Implementation uses an underlying {@link ArrayList} for data storage.<br>
  * 
@@ -63,7 +65,7 @@ public class Stack<T> implements Serializable {
 		if(data.size() < size) {
 			data.add(e);
 		} else {
-			throw new IndexOutOfBoundsException("Stack is Full!");
+			throw new IndexOutOfReachException("Stack is Full!");
 		}
 	}
 	
@@ -72,7 +74,7 @@ public class Stack<T> implements Serializable {
 	 */
 	public T pop() {
 		if(data.isEmpty()) {
-			throw new IndexOutOfBoundsException("Stack is Empty!");
+			throw new IndexOutOfReachException("Stack is Empty!");
 		} else {
 			return data.remove(data.size() - 1);
 		}
@@ -84,7 +86,7 @@ public class Stack<T> implements Serializable {
 	 */
 	public T peek() {
 		if(data.isEmpty()) {
-			throw new IndexOutOfBoundsException("Stack is Empty!");
+			throw new IndexOutOfReachException("Stack is Empty!");
 		} else {
 			return data.get(data.size() - 1);
 		}

@@ -6,4 +6,6 @@ Current Inclusions:
 
 1. Standard Graph Implementation
 2. Basic Graph Problems
-2. Standard LinkedList Implementation
+3. Standard LinkedList Implementation
+4. Standard Stack Implementation
+5. Standard Queue Implementation
