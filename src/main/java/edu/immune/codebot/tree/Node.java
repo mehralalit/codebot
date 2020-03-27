@@ -7,7 +7,6 @@ import java.io.Serializable;
 
 /**
  * Node is the basic building block for a Tree data structure<br>
- * Current implementation ensures that the data is only pushed during node creation and reseting the same is not allowed.<br>
  * <br>
  * Implementation accepts only those classes that are of type {@link Comparable}
  * 
@@ -47,6 +46,10 @@ public class Node<T extends Comparable<T>> implements Serializable, Comparable<T
 
 	public T getData() {
 		return data;
+	}
+	
+	public void setData(T data) {
+		this.data = data;
 	}
 
 	@Override

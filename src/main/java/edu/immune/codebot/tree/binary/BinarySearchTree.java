@@ -30,27 +30,71 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	 * new node in the tree<br>
 	 * 
 	 * @param element new element that should be added to the tree
-	 * @param parent possible parent element to the new element. First parent is the head node.
+	 * @param head possible parent element to the new element. First parent is the head node.
 	 */
-	private void add(T element, Node<T> parent) {
-		if (element.compareTo(parent.getData()) <= 0) {
-			if (null == parent.getLeft()) {
-				Node<T> newnode = new Node<>(element);
-				parent.setLeft(newnode);
-				return;
-			} else {
-				add(element, parent.getLeft());
-			}
-		} else {
-			if (null == parent.getRight()) {
-				Node<T> newnode = new Node<>(element);
-				parent.setRight(newnode);
-				return;
-			} else {
-				add(element, parent.getRight());
-			}
+	private Node<T> add(T element, Node<T> head) {
 
+		if (head == null) {
+			head = new Node<>(element);
+			return head;
 		}
+
+		if (element.compareTo(head.getData()) < 0) {
+			head.setLeft(add(element, head.getLeft()));
+		} else if(element.compareTo(head.getData()) > 0) {
+			head.setRight(add(element, head.getRight()));
+		}
+
+		return head;
+	}
+	
+	/**
+	 * Finds the element with the minimum value in the left subtree of the provided node<br>
+	 * Support method to remove an element from the tree.<br>
+	 * 
+	 * @param node
+	 * @return
+	 */
+	private T findMinElement(Node<T> node) {
+		return (null == node.getLeft())?node.getData():findMinElement(node.getLeft());
+	}
+	
+	/**
+	 * Support method to remove an element from the tree
+	 * @param element
+	 * @param head
+	 * @return
+	 */
+	private Node<T> remove(T element, Node<T> head) {
+		
+		if(null == head) {
+			return head;
+		}
+		
+		// traverse downwards in the tree structure
+		if(element.compareTo(head.getData()) < 0) {
+			head.setLeft(remove(element, head.getLeft()));
+		} else if(element.compareTo(head.getData()) > 0) {
+			head.setRight(remove(element, head.getRight()));
+		} else {
+			
+			// check for single parent and leaf nodes
+			if(null == head.getLeft()) {
+				return head.getRight();
+			} else if(null == head.getRight()) {
+				return head.getLeft();
+			}
+			
+			// for nodes with 2 child, find the minimum value element in the right subtree 
+			// and replace the parent element with that element 
+			T successor = findMinElement(head.getRight());
+			head.setData(successor);
+			
+			// delete the parent element after replacing it with next minimum element
+			head.setRight(remove(successor, head.getRight()));
+		}
+		
+		return head;
 	}
 	
 	/**
@@ -101,12 +145,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	 * @param element new element that should be added to the tree
 	 */
 	public void add(T element) {
-		if (head == null) {
-			head = new Node<>(element);
-		} else {
-			add(element, head);
-		}
-
+		head = add(element, head);
+		
 		// increment size of the tree
 		size++;
 	}
@@ -118,7 +158,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	 * @param element
 	 */
 	public void remove(T element) {
-		// TODO
+		head = remove(element, head);
 	}
 	
 	/**

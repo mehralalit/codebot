@@ -64,5 +64,48 @@ public class BinarySearchTreeTester {
 		assertEquals("1 3 2", content.trim());
 	}
 	
+	@Test
+	public void testRemoveLeafElement() {
+		tree.add(2);
+		tree.add(1);
+		tree.add(3);
+		tree.add(6);
+		tree.add(4);
+		String content = tree.inorder();
+		assertEquals("1 2 3 4 6", content.trim());
+		
+		tree.remove(1);
+		content = tree.inorder();
+		assertEquals("2 3 4 6", content.trim());
+	}
 	
+	@Test
+	public void testRemoveSingleParent() {
+		tree.add(2);
+		tree.add(1);
+		tree.add(3);
+		tree.add(6);
+		tree.add(4);
+		String content = tree.inorder();
+		assertEquals("1 2 3 4 6", content.trim());
+		
+		tree.remove(3);
+		content = tree.inorder();
+		assertEquals("1 2 4 6", content.trim());
+	}
+	
+	@Test
+	public void testRemoveParentOfTwo() {
+		tree.add(2);
+		tree.add(1);
+		tree.add(3);
+		tree.add(6);
+		tree.add(4);
+		String content = tree.inorder();
+		assertEquals("1 2 3 4 6", content.trim());
+		
+		tree.remove(2);
+		content = tree.inorder();
+		assertEquals("1 3 4 6", content.trim());
+	}
 }
