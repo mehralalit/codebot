@@ -9,3 +9,4 @@ Current Inclusions:
 3. Standard LinkedList Implementation
 4. Standard Stack Implementation
 5. Standard Queue Implementation
+6. Standard BST Implementation
