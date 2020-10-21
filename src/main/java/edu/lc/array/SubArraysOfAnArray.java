@@ -1,5 +1,9 @@
 package edu.lc.array;
 
+/**
+ * @author Lalit Mehra
+ *
+ */
 public class SubArraysOfAnArray {
 
 	// Java code to print all possible subarrays
@@ -33,7 +37,7 @@ public class SubArraysOfAnArray {
 		}
 
 		public static void main(String args[]) {
-			int[] arr = { 1, 2, 3 };
+			int[] arr = { 1, 2, 3, 4 };
 			printSubArrays(arr, 0, 0);
 
 		}

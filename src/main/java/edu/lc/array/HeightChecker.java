@@ -3,9 +3,9 @@ package edu.lc.array;
 import java.util.Arrays;
 
 /**
- *
  * #1051 https://leetcode.com/problems/height-checker/
- *
+ * 
+ * @author Lalit Mehra
  */
 public class HeightChecker {
 

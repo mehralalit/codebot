@@ -1,5 +1,11 @@
 package edu.lc.string;
 
+/**
+ * #14 https://leetcode.com/problems/longest-common-prefix
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class LongestCommonPrefix {
 
 	static class Solution {

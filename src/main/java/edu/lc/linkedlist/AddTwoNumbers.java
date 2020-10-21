@@ -1,5 +1,11 @@
-package edu.lc.list;
+package edu.lc.linkedlist;
 
+/**
+ * #2 https://leetcode.com/problems/add-two-numbers
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class AddTwoNumbers {
 
 	static class ListNode {

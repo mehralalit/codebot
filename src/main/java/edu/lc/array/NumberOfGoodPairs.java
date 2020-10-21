@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 	#1512
- *	https://leetcode.com/problems/number-of-good-pairs/
+ * #1512 https://leetcode.com/problems/number-of-good-pairs
+ * 
+ * @author Lalit Mehra
  */
 public class NumberOfGoodPairs {
 

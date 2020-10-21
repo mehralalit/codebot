@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * #896 https://leetcode.com/problems/monotonic-array/
- *
+ * 
+ * @author Lalit Mehra
  */
 public class MonotonicArray {
 

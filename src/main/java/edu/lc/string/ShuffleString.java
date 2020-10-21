@@ -1,9 +1,10 @@
 package edu.lc.string;
 
-import java.util.Arrays;
-
 /**
- * #1528
+ * #1528 https://leetcode.com/problems/shuffle-string
+ * 
+ * @author Lalit Mehra
+ *
  */
 public class ShuffleString {
 

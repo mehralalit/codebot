@@ -3,9 +3,9 @@ package edu.lc.array;
 import java.util.Arrays;
 
 /**
- * #1365
- * https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+ * #1365 https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
  *
+ * @author Lalit Mehra
  */
 public class HowManyNumbersAreSmallerThanTheCurrentNumber {
 

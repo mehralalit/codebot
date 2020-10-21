@@ -3,6 +3,12 @@ package edu.lc.string;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * #1496 https://leetcode.com/problems/path-crossing
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class PathCrossing {
 	
 	static class Solution {

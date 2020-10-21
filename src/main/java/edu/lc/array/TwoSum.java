@@ -2,6 +2,12 @@ package edu.lc.array;
 
 import java.util.Arrays;
 
+/**
+ * #1 https://leetcode.com/problems/two-sum
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class TwoSum {
 	
 	static class Solution {

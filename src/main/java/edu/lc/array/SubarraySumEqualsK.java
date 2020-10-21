@@ -1,5 +1,11 @@
 package edu.lc.array;
 
+/**
+ * #560 https://leetcode.com/problems/subarray-sum-equals-k
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class SubarraySumEqualsK {
 
 	static class Solution {

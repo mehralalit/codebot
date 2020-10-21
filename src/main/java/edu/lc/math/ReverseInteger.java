@@ -1,5 +1,11 @@
 package edu.lc.math;
 
+/**
+ * #7 https://leetcode.com/problems/reverse-integer/
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class ReverseInteger {
 
 	static class Solution {

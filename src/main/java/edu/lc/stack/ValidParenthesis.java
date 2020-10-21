@@ -2,6 +2,12 @@ package edu.lc.stack;
 
 import java.util.Stack;
 
+/**
+ * #20 https://leetcode.com/problems/valid-parentheses/
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class ValidParenthesis {
 
 	static class Solution {

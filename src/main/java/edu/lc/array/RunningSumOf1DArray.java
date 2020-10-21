@@ -3,7 +3,9 @@ package edu.lc.array;
 import java.util.Arrays;
 
 /**
- * #1480
+ * #1480 https://leetcode.com/problems/running-sum-of-1d-array
+ * 
+ * @author Lalit Mehra
  */
 public class RunningSumOf1DArray {
 
@@ -18,7 +20,7 @@ public class RunningSumOf1DArray {
 
 		public static void main(String args[]) {
 			Solution obj = new Solution();
-			int[] nums = {1, 1, 1, 1, 1};
+			int[] nums = { 1, 1, 1, 1, 1 };
 			nums = obj.runningSum(nums);
 			System.out.println(Arrays.toString(nums));
 		}

@@ -2,6 +2,12 @@ package edu.lc.string;
 
 import java.util.Random;
 
+/**
+ * #1576 https://leetcode.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters
+ * 
+ * @author Lalit Mehra
+ *
+ */
 public class ReplaceQuestionMarks {
 
 	static class Solution {
